@@ -128,8 +128,8 @@ int main(int argc, char** argv) {
                 vector<cl_image_format> formats(nbFormats);
                 clGetSupportedImageFormats( context, CL_MEM_READ_WRITE, CL_MEM_OBJECT_IMAGE2D, nbFormats, &formats[0], NULL );
                 for(auto &form : formats)
-                    cout << "  "  << channelOrderName(form.image_channel_order)
-                         << " - " << channelTypeName (form.image_channel_data_type)
+                    cout << "    "  << channelOrderName(form.image_channel_order)
+                         << " - "   << channelTypeName (form.image_channel_data_type)
                          << "\n";
             }
 
